@@ -28,6 +28,7 @@
     "@ionic/pro": "2.0.4",
     "angularfire2": "^5.1.2",
     "cordova-android": "8.0.0",
+    "cordova-ios": "5.0.0",
     "core-js": "^2.5.4",
     "firebase": "^5.9.3",
     "rxjs": "~6.3.3",
@@ -78,7 +79,8 @@
       "cordova-plugin-ionic-keyboard": {}
     },
     "platforms": [
-      "android"
+      "android",
+      "ios"
     ]
   }
 }
