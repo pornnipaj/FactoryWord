@@ -1,0 +1,48 @@
+<ion-header>
+  <ion-toolbar color="primary">
+
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+
+    <ion-title>แก้ไขข้อมูลคำศัพท์</ion-title>
+
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  <form [formGroup]="exampleForm" novalidate (ngSubmit)="onSubmit(exampleForm.value)" no-padding>
+    <ion-item>
+      <ion-label position="floating">ชื่อ</ion-label>
+      <ion-input type="text" formControlName="name" placeholder="ชื่อ" required></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">ภาษาจีน</ion-label>
+      <ion-input type="text" formControlName="chinese" placeholder="ภาษาจีน" required></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">พินอิน</ion-label>
+      <ion-input type="text" min="0" max="100" placeholder="พินอิน" formControlName="pinin" required></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">คำอ่าน</ion-label>
+      <ion-input type="text" min="0" max="100" placeholder="คำอ่าน" formControlName="spell" required></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">ประโยค</ion-label>
+      <ion-input type="text" min="0" max="100" placeholder="ประโยค" formControlName="sentense" required></ion-input>
+    </ion-item>
+
+
+    <ion-button margin-top color="primary" expand="block" [disabled]="!exampleForm.valid" type="submit">บันทึก
+    </ion-button>
+
+    <ion-button color="medium" expand="block" (click)="cancel()" type="submit">ยกเลิก</ion-button>
+
+
+    <ion-button margin-top color="danger" expand="block" [disabled]="!exampleForm.valid"
+      (click)="presentAlertConfirm()">ลบคำศัพท์</ion-button>
+  </form>
+
+
+</ion-content>

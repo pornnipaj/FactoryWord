@@ -1,0 +1,22 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+
+    <ion-title>ค้นหาคำศัพท์</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-searchbar [(ngModel)]="searchValue" [ngModelOptions]="{standalone: true}" placeholder="Search by name..."
+    (keyup)="searchByName()" (ionCancel)="onCancel($event)"></ion-searchbar>
+
+  <ion-item *ngFor="let item of items" lines="full">
+    <ion-label (click)="viewEdit(item)">
+      <h2>{{item.payload.doc.data().name}}</h2>
+    </ion-label>
+    <ion-button fill="outline" slot="end" (click)="viewDetail(item)">view</ion-button>
+  </ion-item>
+
+</ion-content>

@@ -1,0 +1,27 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title>คำศัพท์</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-searchbar [(ngModel)]="searchValue" [ngModelOptions]="{standalone: true}" placeholder="Search by name..."
+  (keyup)="searchByName()" (ionCancel)="onCancel($event)"></ion-searchbar>
+
+<ion-content>
+  <ion-item *ngFor="let item of items" lines="full">
+    <ion-label>
+      <h2>{{item.payload.doc.data().name}}</h2>
+    </ion-label>
+    <ion-button fill="outline" slot="end" (click)="viewEdit(item)">แก้ไข</ion-button>
+  </ion-item>
+
+</ion-content>
+
+<ion-fab vertical="bottom" horizontal="end" slot="fixed">
+  <ion-fab-button color="primary">
+    <ion-icon name="search" routerLink="/search-vocab"></ion-icon>
+  </ion-fab-button>
+  <ion-fab-button color="primary">
+    <ion-icon name="add" routerLink="/create-vocab"></ion-icon>
+  </ion-fab-button>
+</ion-fab>
