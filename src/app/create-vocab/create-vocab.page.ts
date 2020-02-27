@@ -47,9 +47,10 @@ export class CreateVocabPage implements OnInit {
       .then(
         res => {
           this.resetFields();
-          this.router.navigate(['']);
+          this.router.navigate(['/home/']);
         }
       );
+      this.router.navigate(['/home/']);
   }
 
 }

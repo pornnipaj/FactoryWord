@@ -79,4 +79,13 @@ export class HomePage implements OnInit {
     });
     return result;
   }
+
+  onCancel(){
+
+  }
+
+  viewDetail(item) {
+    this.router.navigate(['/details/' + item.payload.doc.id]);
+  }
+
 }

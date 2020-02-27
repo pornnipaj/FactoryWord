@@ -10,7 +10,7 @@ import { DetailResolver } from './detail/detail.resolver';
 
 
 const routes: Routes = [
-  { path: '', component: HomePage },
+  { path: 'home', component: HomePage },
   { path: 'create-vocab', component: CreateVocabPage },
   { path: 'edits/:id', component: EditVocabPage, resolve: { data: EditVocabResolver } },
   // { path: 'edit', loadChildren: './edit/edit.module#/EditPageModule' },
