@@ -5,13 +5,7 @@
 export const environment = {
   production: false,
   firebase: {
-    // apiKey: "AIzaSyDFJxcuyc5cbGk18ttCOJk6hNqWgoJifsM",
-    // authDomain: "fir-ionic-8ca6c.firebaseapp.com",
-    // databaseURL: "https://fir-ionic-8ca6c.firebaseio.com",
-    // projectId: "fir-ionic-8ca6c",
-    // storageBucket: "fir-ionic-8ca6c.appspot.com",
-    // messagingSenderId: "28697750184",
-    // appId: "1:28697750184:web:fa89ca1ded6d68e29bb09d",
+    
   }
 };
 
