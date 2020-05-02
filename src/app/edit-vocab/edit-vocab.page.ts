@@ -50,7 +50,7 @@ export class EditVocabPage implements OnInit {
     this.firebaseService.updateName(this.item.id, value)
       .then(
         res => {
-          this.router.navigate(['']);
+          this.router.navigate(['/home']);
         }
       );
   }
@@ -58,31 +58,32 @@ export class EditVocabPage implements OnInit {
     this.router.navigate(['']);
   }
 
-  async presentAlertConfirm() {
+  async delete() {
     const alert = await this.alertController.create({
-      header: 'Confirm delete',
+      header: 'ยืนยันการลบ',
       buttons: [
         {
-          text: 'Cancel',
-          role: 'cancel',
-          cssClass: 'secondary',
-          handler: () => {
-            console.log('Confirm Cancel: blah');
-          }
-        }, {
-          text: 'Delete',
+          text: 'ลบข้อมูล',
           handler: () => {
             this.firebaseService.deleteName(this.item.id)
               .then(
                 res => {
-                  this.router.navigate(['']);
+                  this.router.navigate(['home']);
                 },
                 err => {
                   console.log(err);
                 }
               );
           }
-        }
+        },
+        {
+          text: 'ยกเลิก',
+          role: 'cancel',
+          cssClass: 'secondary',
+          handler: () => {
+            console.log('Confirm Cancel: blah');
+          }
+        } 
       ]
     });
 

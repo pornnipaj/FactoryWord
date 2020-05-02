@@ -8,11 +8,12 @@
   (keyup)="searchByName()" (ionCancel)="onCancel($event)"></ion-searchbar>
 
 <ion-content>
-  <ion-item *ngFor="let item of items" lines="full" (click)="viewDetail(item)">
+  <ion-item *ngFor="let item of items" lines="full">
     <ion-label>
       <h2>{{item.payload.doc.data().name}}</h2>
     </ion-label>
-    <ion-button fill="outline" slot="end" (click)="viewEdit(item)">แก้ไข</ion-button>
+    <ion-button color="success" slot="end" (click)="viewDetail(item)">ดู</ion-button>
+    <ion-button slot="end" (click)="viewEdit(item)">แก้ไข</ion-button>
   </ion-item>
 
 </ion-content>

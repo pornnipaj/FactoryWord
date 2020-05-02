@@ -10,16 +10,44 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content padding>
+<ion-content>
   <ion-card>
     <!-- <ion-card-header>
       <ion-card-title></ion-card-title>
-    </ion-card-header> -->
+    </ion-card-header> -->    
     <ion-card-content>
-      <p>{{item.chinese}}</p>
-      <p>{{item.pinin}}</p>
-      <p>{{item.spell}}</p>
-      <p>{{item.sentense}}</p>
+      <div class="row">
+        <div class="col-md-4">
+          <h3>ภาษาจีน :</h3>
+        </div>
+        <div class="col-md-8">
+          {{item.chinese}}
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-4">
+          พินอิน :
+        </div>
+        <div class="col-md-8">
+          {{item.pinin}}
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-4">
+          คำอ่าน :
+        </div>
+        <div class="col-md-8">
+          {{item.spell}}
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-4">
+          ประโยค :
+        </div>
+        <div class="col-md-8">
+          {{item.sentense}}
+        </div>
+      </div>
     </ion-card-content>
   </ion-card>
 </ion-content>
